@@ -14,7 +14,7 @@ body {
 .title {
   display: flex;
   justify-content: center;
-  margin: 3% 40% -10% 0;
+  margin: 3% auto -10%;
   font-size: 2rem;
 }
 
@@ -67,7 +67,7 @@ body {
 }
 
 .img-content {
-  padding: 1.8rem;
+  padding: 1rem;
 }
 
 .img-container {
@@ -92,25 +92,6 @@ body {
   transition: 1s;
 }
 
-/* new */
-.bayan-part:hover .img-container {
-  max-height: 15rem;
-}
-
-.bayan-part:hover .img-content {
-  max-height: 15rem;
-}
-
-.bayan-part:hover .cross {
-  transform: rotate(-90deg);
-  transition: 0.5s;
-}
-
-.bayan-part:hover .img {
-  transform: scale(1.4);
-  transition: 2s;
-}
-
 .bayan-part:target .img-container {
   max-height: 15rem;
 }
@@ -128,21 +109,57 @@ body {
   transition: 0.5s;
 }
 
+.bayan-part:not(:target) .cross {
+  transition: 0.5s;
+}
+
 .bayan-part:target .line-box {
   color: green;
 }
 
+@media (max-width: 1400px) {
+  .bayan-content {
+    width: 60vw;
+  }
+}
+
+@media (min-width: 821px) {
+  .bayan-part:hover .img-container {
+    max-height: 15rem;
+  }
+
+  .bayan-part:hover .cross {
+    transform: rotate(-90deg);
+    transition: 0.5s;
+  }
+
+  .bayan-part:hover .img {
+    transform: scale(1.4);
+    transition: 2s;
+  }
+}
+
 @media (max-width: 820px) {
+  .title {
+    font-size: 1.5rem;
+  }
   .bayan-part a {
     font-size: 0.8rem;
   }
   .bayan-content {
-    width: 80vw;
+    width: 70vw;
     margin: auto;
   }
   .img {
     width: 20%;
     height: 15%;
+  }
+
+  .cross {
+    display: block;
+  }
+  .line-box {
+    color: black;
   }
 }
 @media (max-width: 425px) {
@@ -156,7 +173,7 @@ body {
     width: 80vw;
   }
   .img-content {
-    padding: 1.2rem;
+    padding: 0.8rem;
   }
 }
 @media (max-width: 320px) {
@@ -167,6 +184,6 @@ body {
     width: 80vw;
   }
   .img-content {
-    padding: 0.8rem;
+    padding: 0.6rem;
   }
 }
