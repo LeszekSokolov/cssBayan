@@ -1,0 +1,171 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+  list-style: none;
+  text-decoration: none;
+}
+
+body {
+  font-size: 2rem;
+  background-color: antiquewhite;
+}
+
+.title {
+  display: flex;
+  justify-content: center;
+  margin: 3% 40% -10% 0;
+  font-size: 2rem;
+}
+
+.bayan {
+  font-size: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  line-height: 1.6;
+  margin-top: 10%;
+}
+
+.bayan-content {
+  width: 50vw;
+  margin: auto;
+}
+
+.bayan-content:hover .cross {
+  display: block;
+}
+
+.bayan-content:hover .line-box {
+  color: black;
+}
+
+.bayan-part {
+  background: #edede9;
+}
+
+.bayan-part a {
+  display: block;
+  font-size: 1rem;
+  font-weight: 500;
+  padding: 0.9rem 1.8rem;
+  background: #d2d1cb;
+  color: #2269ed91;
+  font-weight: 800;
+}
+
+.line-box {
+  display: flex;
+  justify-content: space-between;
+}
+
+.cross {
+  display: none;
+  width: 1.8%;
+  height: 1.8%;
+  margin-top: 0.8%;
+  transform: rotate(-45deg);
+}
+
+.img-content {
+  padding: 1.8rem;
+}
+
+.img-container {
+  max-height: 0em;
+  transition: 1s linear 0s;
+  overflow: hidden;
+}
+
+.bayan-part + .bayan-part a {
+  border-top: 0.01rem solid rgba(255, 255, 255, 0.8);
+}
+
+.img {
+  display: block;
+  width: 20%;
+  /* height: 7.5%; */
+  border-radius: 1rem;
+  object-fit: fill;
+  background-size: cover;
+}
+
+.img:not(:target) {
+  margin: auto;
+  transition: 1s;
+}
+
+/* new */
+.bayan-part:hover .img-container {
+  max-height: 25rem;
+  /* overflow: visible; */
+}
+
+.bayan-part:hover .img-content {
+  max-height: 25rem;
+  /* overflow: visible; */
+}
+
+.bayan-part:hover .cross {
+  transform: rotate(-90deg);
+  transition: 0.5s;
+}
+
+.bayan-part:hover .img {
+  transform: scale(2);
+  transition: 2s;
+}
+
+.bayan-part:target .img-container {
+  max-height: 25rem;
+}
+
+.bayan-part:target .img-content {
+  max-height: 25rem;
+}
+
+.bayan-part:target .img {
+  transform: scale(2);
+}
+
+.bayan-part:target .cross {
+  transform: rotate(-90deg);
+  transition: 0.5s;
+}
+
+.bayan-part:target .line-box {
+  color: green;
+}
+
+@media (max-width: 768px) {
+  .bayan-content {
+    width: 80vw;
+    margin: auto;
+  }
+  .img {
+    width: 20%;
+    height: 15%;
+  }
+}
+@media (max-width: 425px) {
+  body {
+    line-height: 1.3;
+  }
+  .bayan-content {
+    width: 80vw;
+  }
+  .img-content {
+    padding: 1.2rem;
+  }
+}
+@media (max-width: 320px) {
+  body {
+    line-height: 1.3;
+  }
+  .bayan-content {
+    width: 80vw;
+  }
+  .img-content {
+    padding: 0.8rem;
+  }
+}
