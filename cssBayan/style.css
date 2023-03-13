@@ -58,6 +58,20 @@ body {
   justify-content: space-between;
 }
 
+.line:active {
+  color: red;
+}
+
+.bayan-part:active .line {
+  color: red;
+}
+
+.bayan-part:active .img {
+  border: 0.3rem solid red;
+  transition: 0.1s;
+  filter: blur(0.3rem);
+}
+
 .cross {
   display: none;
   width: 1.8%;
@@ -117,6 +131,10 @@ body {
   color: green;
 }
 
+.line-box:active {
+  color: rgb(207, 11, 21);
+}
+
 @media (max-width: 1400px) {
   .bayan-content {
     width: 60vw;
@@ -145,6 +163,7 @@ body {
   }
   .bayan-part a {
     font-size: 0.8rem;
+    cursor: default;
   }
   .bayan-content {
     width: 70vw;
