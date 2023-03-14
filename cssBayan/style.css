@@ -68,7 +68,6 @@ body {
 
 .bayan-part:active .img {
   border: 0.3rem solid red;
-  transition: 0.1s;
   filter: blur(0.3rem);
 }
 
@@ -142,6 +141,9 @@ body {
 }
 
 @media (min-width: 821px) {
+}
+
+@media (hover: hover) {
   .bayan-part:hover .img-container {
     max-height: 15rem;
   }
@@ -155,6 +157,9 @@ body {
     transform: scale(1.4);
     transition: 2s;
   }
+  .cross {
+    display: block;
+  }
 }
 
 @media (max-width: 820px) {
@@ -163,7 +168,6 @@ body {
   }
   .bayan-part a {
     font-size: 0.8rem;
-    cursor: default;
   }
   .bayan-content {
     width: 70vw;
